@@ -11,8 +11,13 @@ const port = process.env.PORT || 9000
 // } else {
 //     console.log(`booooh cohort ${cohort1}`)
 // }
+// console.log(`the user is ${user}`)
 
-console.log(`the user is ${user}`)
+app.get('/', (req, res)=> {
+    res.send(`
+    <h1>web49 Rocks!<h1>
+`)
+})
 
 app.get(`/hello`, (req, res) => {
     res.json ({message: `yo what up`})
